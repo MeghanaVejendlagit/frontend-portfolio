@@ -1,3 +1,53 @@
-<h1>Analytics Page</h1>
-<p>This is the analytics section of the dashboard.</p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+font-family:Arial;
+padding:40px;
+}
+
+.chart-container{
+width:600px;
+margin:auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Analytics Dashboard</h1>
+
+<div class="chart-container">
+<canvas id="salesChart"></canvas>
+</div>
+
+<script>
+const ctx = document.getElementById('salesChart');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Jan','Feb','Mar','Apr','May'],
+datasets: [{
+label: 'Orders',
+data: [120, 190, 300, 250, 220],
+backgroundColor: '#3498db'
+}]
+},
+options: {
+responsive: true
+}
+});
+</script>
+
+<br>
 <a href="index.html">Back to Dashboard</a>
+
+</body>
+</html>
