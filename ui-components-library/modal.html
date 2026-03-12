@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Modal Component</title>
+
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.show {
+  display: block;
+}
+</style>
+
+<script>
+function openModal() {
+  document.getElementById("modal").classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
+}
+</script>
+
+</head>
+
+<body>
+
+<button onclick="openModal()">Open Modal</button>
+
+<div id="modal" class="modal">
+<p>This is a modal component</p>
+<button onclick="closeModal()">Close</button>
+</div>
+
+</body>
+</html>
